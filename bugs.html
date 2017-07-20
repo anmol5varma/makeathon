@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<style>
+#form2 .active>a{
+	background-color:black;
+	color:white;
+}
+#form2 li>a{
+	color:black;
+}
+#browser{
+	display:none;
+}
+</style>
+<script>
+	function show(){
+		document.getElementById("browser").style.display="block";
+	}
+	function hide(){
+		document.getElementById("browser").style.display="none";
+	}
+</script>
+<body>
+
+<div class="container">
+<div class="col-md-8 col-md-offset-2">
+  <h2>Bugs/report and features</h2>
+  <form id="form2" role="form">
+	<div class="col-md-12">
+		<div class="form-group col-md-6">
+		  <label for="name">Name:</label>
+		  <input type="text" class="form-control" id="name" placeholder="Enter name" required>
+		</div>
+	</div>
+	<div class="col-md-12">
+		<div class="col-md-6 form-group">
+		  <label for="email">Email:</label>
+		  <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+		</div>
+	</div>
+    <div class="form-group">
+		<p>This is a<span style="color:red;"><sup>*</sup></span></p>
+		<ul class="nav nav-pills">
+			<li class="active"><a data-toggle="pill" href="#bugs">Bug report</a></li>
+			<li><a data-toggle="pill" href="#feature">Feature request</a></li>
+		</ul>
+  
+		<div class="tab-content">
+			<div id="bugs" class="tab-pane fade in active">
+			  <div class="col-md-12">
+				<div class="col-md-6">
+				<label style="padding-top:10px;"><big>What browser are you using?</big></label>
+					<div class="radio">
+					  <label><input type="radio" name="optradio" onclick="hide()">IE 8 and below</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="optradio" onclick="hide()">IE 9</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="optradio" onclick="hide()">Google chrome</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="optradio" onclick="hide()">Mozilla firefox</label>
+					</div>
+					<div class="radio">
+					  <label><input type="radio" name="optradio" onclick="show()">Others</label>
+					  <input type="text" class="form-control" id="browser" placeholder="Please mention here">
+					</div>
+				</div>
+			  </div>
+			  <div class="col-md-12">
+				<div class="col-md-6">
+				<label for="url" style="padding-top:10px;"><big>Page reference:</big></label>
+					<input type="text" class="form-control" id="url" placeholder="Page url or reference to that page" required>
+				</div>
+			  </div>
+			  <div class="col-md-12">
+				<div class="col-md-6">
+				<label for="url" style="padding-top:10px;"></label>
+					<div class="form-group">
+					  <label for="sel1"><big>Device you were using:</big></label>
+					  <select class="form-control" id="device">
+						<option>Mobile</option>
+						<option>Laptop</option>
+						<option>Tablet</option>
+					  </select>
+					</div>
+				</div>
+			  </div>
+			  <div class="col-md-12">
+				<div class="col-md-6 form-group">
+				<div class="form-group">
+				  <label for="comment">Detail:</label>
+				  <textarea class="form-control" rows="6" id="comment"></textarea>
+				</div>
+				</div>
+			  </div>
+			</div>
+			<div id="feature" class="tab-pane fade">
+			  <div class="col-md-12">
+				<div class="col-md-6">
+				<label for="url"><big>Title:</big></label>
+					<input type="text" class="form-control" id="url" placeholder="Appropiate title for suggested feature" required>
+				</div>
+			  </div>
+			  <div class="col-md-12">
+				<div class="col-md-6 form-group">
+					<div class="form-group">
+				  <label for="comment">How would you like the feature to work?</label>
+				  <textarea class="form-control" rows="6" id="feadetail"></textarea>
+				</div>
+				</div>
+			  </div>
+			  <div class="col-md-12">
+				<div class="col-md-6 form-group">
+					<div class="form-group">
+				  <label for="comment">Why is this feature important to you?</label>
+				  <textarea class="form-control" rows="6" id="feaimp"></textarea>
+				</div>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+</div>
+
+</body>
+</html>
